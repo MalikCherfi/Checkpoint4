@@ -1,12 +1,13 @@
-import React, { useState } from "react";
-import Global from "../styled-components/Global";
-import ProjectList from "../components/ProjectList";
 
-function Home({ project }) {
+// import ProjectList from "../components/ProjectList";
+import Parallax from "../components/Parallax";
+
+function Home() {
   return (
-    <Global>
-      <ProjectList project={project} />
-    </Global>
+  
+        <Parallax />
+    
+   
   );
 }
 

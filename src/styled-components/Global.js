@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 const Global = styled.div`
-    display: ${(props) => props.display || "flex"};
-    flex-direction: ${(props) => props.flexDirection || "column"};
-    width: ${(props) => props.width || "90%" };
     margin: ${(props) => props.margin || "auto"};
-    font-family: ${(props) => props.fontFamily || "Trebuchet MS"};
-    text-align: ${(props) => props.textAlign || "justify"};
+    padding: ${(props) => props.padding || "0"};
+    box-sizing: ${(props) => props.boxSizing || "border-box" };
+    overflow-x: ${(props) => props.overflowX || "hidden"};
+    background: ${(props) => props.backgound || "white"};
+    width: ${(props) => props.width || "100%" };
 
     a{
         text-decoration: ${(props) => props.textDecoration || "none"};

@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import Global from "../styled-components/Global";
+
 import postProject from "../data/postProject";
 
 const AddProjectForm = () => {
@@ -25,7 +25,7 @@ const AddProjectForm = () => {
   };
 
   return (
-    <Global>
+  
       <form onSubmit={handleSubmit(postData)} encType="multipart/form-data">
         <div>
           <input
@@ -82,7 +82,7 @@ const AddProjectForm = () => {
         </div>
         <input type="submit" value="Envoyer le formulaire" />
       </form>
-    </Global>
+   
   );
 };
 
