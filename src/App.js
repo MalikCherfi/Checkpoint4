@@ -26,7 +26,7 @@ function App() {
           path="/"
           element={<Home project={project} competence={competence} />}
         />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin" element={<Admin setProject={setProject} setCompetence={setCompetence}/>} />
       </Routes>
     </>
   );

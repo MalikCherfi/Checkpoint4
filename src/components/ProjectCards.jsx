@@ -44,10 +44,10 @@ const DivCard = styled.div`
   justify-content: space-evenly;
   align-items: center;
   height: 400px;
-  width: 350px;
+  width: 400px;
 
   img {
-    width: auto;
+    width: 100%;
     height: 250px;
     border-radius: 20px;
   }

@@ -26,7 +26,9 @@ function Project() {
             <Detail>
               <h1 id="name">{project.name}</h1>
               <h2>{project.year}</h2>
-              <p>{project.details}</p>
+              <DivP>
+                <p>{project.details}</p>
+              </DivP>
             </Detail>
             <LinkButton>
               <a href={project.link} target="_blank">
@@ -72,7 +74,6 @@ const Description = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-
 `;
 
 const Detail = styled.div`
@@ -88,6 +89,10 @@ const Detail = styled.div`
   #name {
     font-family: "Rancho", cursive;
     font-size: 30px;
+  }
+
+  p {
+    text-align: center;
   }
 `;
 
@@ -105,3 +110,7 @@ const Button = styled.button`
   border-radius: 30px;
   color: white;
 `;
+
+const DivP = styled.div`
+width: 70%;
+`

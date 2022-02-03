@@ -15,7 +15,7 @@ function Navigation() {
         </li>
         <li>
           {" "}
-          <a href="contact">Contact</a>
+          <a href="#competence">Competence</a>
         </li>
         <Link to="Admin">
           <li>

@@ -35,11 +35,16 @@ function Parallax({ project, competence }) {
         <img src="../ressources/rocks.png" id="rocks" />
         <img src="../ressources/water.png" id="water" />
       </Section>
-        <div id="projet"></div>
+      <div id="projet"></div>
 
       <Div>
-        <ProjectList project={project} />
-        <CompetenceList competence={competence} />
+        <ProjectDiv>
+          <ProjectList project={project} />
+        </ProjectDiv>
+        <CompetenceDiv>
+          <CompetenceList competence={competence} />
+        </CompetenceDiv>
+        <div id="competence"></div>
       </Div>
     </>
   );
@@ -98,4 +103,17 @@ const Div = styled.div`
   position: relative;
   padding: 100px;
   background: #094b65;
+  display: flex;
+  flex-direction: column;
+ 
 `;
+
+const CompetenceDiv = styled.div`
+  margin-top: 200px;
+`;
+
+const ProjectDiv = styled.div`
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+`
