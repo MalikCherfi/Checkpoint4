@@ -1,30 +1,26 @@
-import { useState } from "react";
 import styled from "styled-components";
+import ProjectList from "./ProjectList";
+import CompetenceList from "./CompetenceList";
 
-function Parallax() {
-  
+function Parallax({ project, competence }) {
+  const text = document.getElementById("text");
+  const bird1 = document.getElementById("bird1");
+  const bird2 = document.getElementById("bird2");
+  const forest = document.getElementById("forest");
+  const rocks = document.getElementById("rocks");
 
-    const text = document.getElementById("text");
-    const bird1 = document.getElementById("bird1");
-    const bird2 = document.getElementById("bird2");
-    const forest = document.getElementById("forest");
-    const rocks = document.getElementById("rocks");
-    const water = document.getElementById("water");
+  window.addEventListener("scroll", () => {
+    let value = window.scrollY;
 
- 
+    text.style.top = `${50 + value * -0.5}%`;
+    bird1.style.top = `${value * -1.5}px`;
+    bird1.style.left = `${value * 2}px`;
+    bird2.style.top = `${value * -1.5}px`;
+    bird2.style.left = `${value * -5}px`;
+    rocks.style.top = `${value * -0.12}px`;
+    forest.style.top = `${value * 0.25}px`;
+  });
 
-    window.addEventListener("scroll", () => {
-      let value = window.scrollY;
-
-      text.style.top = `${50 + value * -0.5}%`;
-      bird1.style.top = `${value * -1.5}px`;
-      bird1.style.left = `${value * 2}px`;
-      bird2.style.top = `${value * -1.5}px`;
-      bird2.style.left = `${value * -5}px`;
-      rocks.style.top = `${value * -0.12}px`;
-      forest.style.top = `${value * 0.25}px`;
-    });
-  
   return (
     <>
       <Section>
@@ -39,8 +35,12 @@ function Parallax() {
         <img src="../ressources/rocks.png" id="rocks" />
         <img src="../ressources/water.png" id="water" />
       </Section>
+        <div id="projet"></div>
 
-      <Div></Div>
+      <Div>
+        <ProjectList project={project} />
+        <CompetenceList competence={competence} />
+      </Div>
     </>
   );
 }
@@ -48,6 +48,8 @@ function Parallax() {
 export default Parallax;
 
 const Section = styled.section`
+  @import url("https://fonts.googleapis.com/css2?family=Rancho&family=Roboto&display=swap");
+
   position: static;
   width: 100%;
   height: 100vh;
@@ -72,6 +74,7 @@ const Section = styled.section`
     font-size: 10vw;
     text-align: center;
     line-height: 0.55em;
+    font-family: "Rancho", cursive;
   }
 
   #text span {

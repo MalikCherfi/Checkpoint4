@@ -1,7 +1,7 @@
 import axios from "../helper/axios-config";
 
-const getProject = async (setProject) => {
-  await axios.get("/project")
+const getCompetence = async (setProject) => {
+  await axios.get("/competence")
   .then((res) => {
       setProject(res.data)
   })
@@ -10,4 +10,4 @@ const getProject = async (setProject) => {
   });
 };
 
-export default getProject;
+export default getCompetence;

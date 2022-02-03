@@ -5,11 +5,13 @@ import styled from "styled-components";
 function Navigation() {
   return (
     <Header>
-      <h1 className="logo">Portfolio</h1>
+      <Link to="/">
+        <h1 className="logo">Portfolio</h1>
+      </Link>
       <ul>
         <li>
           {" "}
-          <a href="projet">Projet</a>
+          <a href="#projet">Projet</a>
         </li>
         <li>
           {" "}
@@ -28,6 +30,8 @@ function Navigation() {
 export default Navigation;
 
 const Header = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap");
+
   position: absolute;
   top: 0;
   left: 0;
@@ -42,6 +46,7 @@ const Header = styled.div`
     color: #094b65;
     font-weight: 700;
     font-size: 2em;
+    font-family: "Rowdies", cursive;
   }
 
   ul {
@@ -56,19 +61,18 @@ const Header = styled.div`
   }
 
   ul li a {
-      text-decoration : none;
-      padding: 6px 15px;
-      color: #094b65;
-      border-radius: 20px;
-
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #094b65;
+    border-radius: 20px;
   }
 
   a {
-      text-decoration: none;
+    text-decoration: none;
   }
 
   ul li a:hover {
-      background : #094b65;
-      color: white;
+    background: #094b65;
+    color: white;
   }
 `;
