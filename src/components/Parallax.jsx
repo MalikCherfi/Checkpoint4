@@ -105,15 +105,29 @@ const Div = styled.div`
   background: #094b65;
   display: flex;
   flex-direction: column;
- 
+
+  &&::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to top, black, transparent);
+    z-index: 10;
+  }
 `;
 
 const CompetenceDiv = styled.div`
   margin-top: 200px;
+  margin-bottom: 200px;
+  width: 100%;
+  display: flex;
+
 `;
 
 const ProjectDiv = styled.div`
-display: flex;
-justify-content: space-evenly;
-flex-wrap: wrap;
-`
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+`;

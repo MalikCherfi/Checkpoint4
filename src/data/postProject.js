@@ -15,7 +15,7 @@ const postProject = async (data, imgData) => {
             ),
           },
         })
-        .then((res) => console.log(res))
+        .then((res) => alert("projet ajouté"))
         .catch((err) => console.log(err));
     })
     .catch((err) => {
